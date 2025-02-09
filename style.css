@@ -1,0 +1,135 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main{
+    height: 537.6px;
+    width: 537.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.204);
+    border-radius: 100px;
+    position: relative;
+    
+}
+
+.center{
+    position: absolute;
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    left: 218.8px;
+    top: 190.8px;
+    border-radius: 20px;
+    border: solid;
+    border-width: 10px;
+    align-content: center;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px 2px;
+    z-index: 100;
+    
+}
+
+.up{
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: center;
+    
+   
+}
+
+.down{
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+   
+    justify-content: center;
+    
+    
+}
+
+.Uleft{
+    border: solid;
+    border-width: 1px;
+    height: 200px;
+    width: 200px;
+    box-shadow:  -1px -1px 8px 4px;
+    border-radius: 100px 0px 0px 0px;
+    background-color: red;
+}
+
+
+
+
+.Uright{
+    border: solid;
+    border-width: 1px;
+    height: 200px;
+    width: 200px;
+    box-shadow:  -1px 1px 8px 4px;
+    border-radius: 0px 100px 0px 0px;
+    background-color: Green;
+}
+
+
+
+.Dleft{
+    border: solid;
+    border-width: 1px;
+    height: 200px;
+    width: 200px;
+    box-shadow:  1px -1px 8px 4px;
+    border-radius: 0px 0px 0px 100px;
+    background-color: Blue;
+}
+
+
+
+
+
+.Dright{
+    border: solid;
+    border-width: 1px;
+    height: 200px;
+    width: 200px;
+    box-shadow:  1px 1px 8px 4px;
+    border-radius: 0px 0px 100px 0px;
+    background-color: Yellow;
+}
+
+
+.start{
+    margin-left: 209px;
+    margin-top: 15px;
+    height: 50px;
+    width: 120px;
+    border-radius: 20px;
+    box-shadow:  0px 1px 3px 1px;
+    transition-duration: 0s;background-image: linear-gradient(to right, rgb(0, 229, 198), rgb(211, 248, 31) 100%);      
+}
+
+
+.active {
+    filter: brightness(160%);
+    transition: all 0.2s ease;
+}
+
+
+.Uleft.active,
+.Uright.active,
+.Dleft.active,
+.Dright.active {
+    filter: brightness(160%);
+    transition: all 0.2s ease;
+}
+
+
