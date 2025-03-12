@@ -29,17 +29,34 @@ function startGame () {
     gameSeq = [];
     playerSeq = [];
     score = 0;
+    document.querySelector('.center').innerHTML = `${score}`;
     gameOn = true;
+    document.querySelector(".start").disabled = true;
+    document.querySelector(".reset").disabled = false;
     nextRound();
+}
+
+function reset() {
+    gameSeq = [];
+    playerSeq = [];
+    score = 0;
+    document.querySelector('.center').innerHTML = `${score}`;
+    gameOn = false;
+    document.querySelector(".reset").disabled = true;
+    document.querySelector(".start").disabled = false;
+
 }
 
 function nextRound () {
     const quadKeys = Object.keys(Colors);
     const Algo = quadKeys[Math.floor(Math.random()*quadKeys.length)];
+    // console.log(Algo);
     gameSeq.push(Algo);
     playSequence();
     
 }
+//DOUBT:
+
 
 function flash (quadrant) {
     quadrants[quadrant].classList.add('active');
@@ -56,8 +73,9 @@ function playSequence () {
 
     setTimeout(() => {
         gameOn = true;
-        playerSeq = []; 
-    }, 1000)
+        playerSeq = [];
+
+    }, 500)
 }
 
 function checkPlayerInput () {
@@ -75,6 +93,9 @@ function ClickHandler (quadrant) {
     flash(quadrant);
     playerSeq.push(quadrant);
 
+    console.log("expected sequence:", gameSeq);
+    console.log("player sequence:", playerSeq)
+
     if(checkPlayerInput()) {
         if (playerSeq.length === gameSeq.length) {  
             score++;
@@ -91,6 +112,9 @@ function ClickHandler (quadrant) {
 function endGame () {
     alert(`Game Over! Your Score: ${score}`);
     gameOn = false;
+    document.querySelector(".start").disabled = false;
+    
 }
 
 updateScore()
+
